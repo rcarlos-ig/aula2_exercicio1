@@ -4,13 +4,15 @@ using System.Globalization;
 namespace aula2_exercicio1 {
     class Program {
         static void Main(string[] args) {
-            Retangulo x = new Retangulo();
+            Retangulo x;
             double area, perimetro, diagonal;
 
             Console.Write("Informe a largura do retângulo: ");
-            x.largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Informe a altura do retângulo: ");
-            x.altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            x = new Retangulo(largura, altura);
 
             area = x.Area();
             perimetro = x.Perimetro();
