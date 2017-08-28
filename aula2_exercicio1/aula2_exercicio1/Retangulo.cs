@@ -2,7 +2,8 @@
 
 namespace aula2_exercicio1 {
     class Retangulo {
-        public double largura, altura;
+        public double largura { get; private set; }
+        public double altura { get; private set; }
 
         public Retangulo(double largura, double altura) {
             this.largura = largura;

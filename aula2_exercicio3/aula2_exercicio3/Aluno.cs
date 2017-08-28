@@ -3,8 +3,10 @@ using System.Globalization;
 
 namespace aula2_exercicio3 {
     class Aluno {
-        public string nome;
-        public double nota1, nota2, nota3;
+        public string nome { get; private set; }
+        public double nota1 { get; private set; }
+        public double nota2 { get; private set; }
+        public double nota3 { get; private set; }
 
         public Aluno(string nome, double nota1, double nota2, double nota3) {
             this.nome = nome;
