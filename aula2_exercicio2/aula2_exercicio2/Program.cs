@@ -4,18 +4,15 @@ using System.Globalization;
 namespace aula2_exercicio2 {
     class Program {
         static void Main(string[] args) {
-            Funcionario x;
-            string nome;
-            double salarioBruto, desconto, porcentagem;
+            Funcionario x = new Funcionario();
+            double porcentagem;
 
             Console.Write("Informe o nome do funcionário: ");
-            nome = Console.ReadLine();
+            x.nome = Console.ReadLine();
             Console.Write("Informe o salário bruto do funcionário: ");
-            salarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.salarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Informe o desconto do salário do funcionário: ");
-            desconto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            x = new Funcionario(nome, salarioBruto, desconto);
+            x.desconto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.WriteLine();
             Console.WriteLine("Dados do funcionário: " + x);
