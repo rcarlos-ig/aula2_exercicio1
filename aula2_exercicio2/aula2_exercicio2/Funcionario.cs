@@ -6,6 +6,12 @@ namespace aula2_exercicio2 {
         public string nome;
         public double salarioBruto, desconto;
 
+        public Funcionario(string nome, double salarioBruto, double desconto) {
+            this.nome = nome;
+            this.salarioBruto = salarioBruto;
+            this.desconto = desconto;
+        }
+
         public double SalarioLiquido() {
             return salarioBruto - desconto;
         }
