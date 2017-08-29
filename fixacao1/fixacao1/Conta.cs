@@ -18,5 +18,16 @@ namespace fixacao1 {
             this.titular = titular;
             saldo = 0.0;
         }
+
+        public override string ToString() {
+            return "Conta: "
+                + numero
+                + ", "
+                + "Titular: "
+                + titular
+                + ", "
+                + "Saldo: R$ "
+                + saldo.ToString("F2", CultureInfo.InvariantCulture);
+        }
     }
 }
