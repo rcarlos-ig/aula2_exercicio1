@@ -3,9 +3,9 @@ using System.Globalization;
 
 namespace fixacao1 {
     class Conta {
-        public int numero;
-        public string titular;
-        public double saldo;
+        public int numero { get; private set; }
+        public string titular { get; set; }
+        public double saldo { get; private set; }
 
         public Conta(int numero, string titular, double valorInicial) {
             this.numero = numero;
@@ -19,14 +19,20 @@ namespace fixacao1 {
             saldo = 0.0;
         }
 
+        public void depositar(double quantia) {
+            saldo += quantia;
+        }
+
+        public void sacar(double quantia) {
+            saldo = saldo - quantia - 5.0;
+        }
+
         public override string ToString() {
             return "Conta: "
                 + numero
-                + ", "
-                + "Titular: "
+                + ", Titular: "
                 + titular
-                + ", "
-                + "Saldo: R$ "
+                + ", Saldo: R$ "
                 + saldo.ToString("F2", CultureInfo.InvariantCulture);
         }
     }

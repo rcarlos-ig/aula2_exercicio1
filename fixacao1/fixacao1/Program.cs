@@ -22,7 +22,24 @@ namespace fixacao1 {
             }
 
             Console.WriteLine();
+            Console.WriteLine("Conta criada: ");
             Console.WriteLine(x);
+
+            Console.WriteLine();
+            Console.Write("Digite um valor para depósito: ");
+            double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.depositar(deposito);
+            Console.WriteLine("Conta atualizada:");
+            Console.WriteLine(x);
+
+            Console.WriteLine();
+            Console.Write("Digite um valor para saque: ");
+            double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.sacar(saque);
+            Console.WriteLine("Conta atualizada:");
+            Console.WriteLine(x);
+
+
             Console.ReadLine();
         }
     }
